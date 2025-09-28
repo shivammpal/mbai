@@ -158,6 +158,7 @@ const Home = () => {
           {displayedSubtitle}<span className="cursor">|</span>
         </motion.p>
         <motion.div
+          className="hero-buttons"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}

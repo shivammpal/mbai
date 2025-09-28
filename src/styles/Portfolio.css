@@ -31,7 +31,7 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -70,12 +70,17 @@
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #00ffff;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .portfolio-item-description {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #c4c4c4;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .visit-button {
@@ -93,4 +98,83 @@
 
 .visit-button:hover {
   transform: scale(1.05);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .portfolio-details {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 2rem 1rem;
+  }
+  .portfolio-title {
+    font-size: 2.5rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .portfolio-section {
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .portfolio-item {
+    overflow: visible;
+  }
+  .portfolio-details {
+    padding: 1rem;
+  }
+  .portfolio-item-title {
+    font-size: 1.25rem;
+  }
+  .portfolio-item-description {
+    font-size: 0.9rem;
+  }
+  .portfolio-image,
+  .slideshow-container {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-container {
+    padding: 1.5rem 0.5rem;
+  }
+  .portfolio-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .portfolio-section {
+    padding: 1rem;
+  }
+  .portfolio-details {
+    padding: 0.75rem;
+  }
+  .portfolio-item-title {
+    font-size: 1.125rem;
+  }
+  .portfolio-item-description {
+    font-size: 0.875rem;
+  }
+  .visit-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .portfolio-image,
+  .slideshow-container {
+    height: 160px;
+  }
 }
